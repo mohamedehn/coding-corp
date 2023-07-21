@@ -1,5 +1,5 @@
 const links = [
-    { name: 'Nos prestations', href: '#' },
+    { name: 'Nos prestations', href: '#prestations' },
     { name: 'Portfolio', href: '#' },
     { name: 'Contact', href: '#' },
   ]
@@ -7,7 +7,7 @@ const links = [
   export default function About () {
 
     return (
-      <div className="relative overflow-hidden bg-[#212348] py-24 sm:py-32 h-screen" id="#about">
+      <div className="relative overflow-hidden bg-[#212348] py-24 sm:py-32 h-screen" id="about">
         <div
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
           aria-hidden="true"
@@ -36,9 +36,9 @@ const links = [
           <div className="mx-auto lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl text-justify">Work with us</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300 text-justify">
-            Chez Coding Corp, nous sommes passionnés par le web et nous offrons une gamme complète de services pour répondre à tous vos besoins 
-            en ligne. Notre expertise couvre divers domaines du web, vous permettant de bénéficier d&apos;un guichet unique pour toutes vos exigences 
-            numériques.
+              Chez Coding Corp, nous sommes passionnés par le web et nous offrons une gamme complète de services pour répondre à tous vos besoins 
+              en ligne. Notre expertise couvre divers domaines du web, vous permettant de bénéficier d&apos;un guichet unique pour toutes vos exigences 
+              numériques.
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-300 text-justify"> 
                 Nous sommes fiers de notre savoir-faire dans la création de sites vitrines qui captivent l&apos;attention de votre audience cible. 

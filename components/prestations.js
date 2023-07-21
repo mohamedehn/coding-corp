@@ -25,7 +25,7 @@ const tiers = [
     name: 'Création de logo / Carte de visite',
     id: 'tier-growth',
     href: '#',
-    price: { monthly: 'à partir de 250€', other:'refonte logo existant sur devis' },
+    price: { monthly: 'à partir de 250€', other:'(refonte logo existant sur devis)' },
     description: "Un logo bien conçu est essentiel pour établir une présence visuelle forte et différencier votre entreprise de la concurrence.",
     features: [
       'Plusieurs variantes de couleurs',
@@ -37,7 +37,7 @@ const tiers = [
 
 export default function Prestations() {
   return (
-    <div className="bg-[#1b1e3d] py-10 sm:py-14 h-screen">
+    <div className="bg-[#1b1e3d] py-10 sm:py-14 h-screen" id='prestations'>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl sm:text-center">
           <h2 className="text-4xl font-semibold leading-7 text-gray-200">Nos prestations</h2>
