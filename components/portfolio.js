@@ -1,7 +1,7 @@
 import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import dns from "../public/assets/dns.png"
-import ges from "../public/assets/ges.png"
+import ges from "../public/assets/ges2.webp"
 import prestatair from "../public/assets/prestatair.png"
 
 const clients = [
@@ -28,19 +28,20 @@ const clients = [
 export default function Portfolio() {
 
   return (
-    <div className='h-screen bg-[#212348] w-full'>
+    <div className='h-auto sm:h-screen bg-[#212348] w-full'>
         <h1 className="text-4xl font-semibold leading-7 text-gray-200 mx-auto max-w-4xl sm:text-center pt-10">Portfolio</h1>
         <p className='mx-auto mt-6 text-lg leading-8 text-gray-200 sm:text-center'>Découvrez ci-dessous quelques une de nos réalisations.</p>
         <div className='flex w-full justify-center'>
-            <ul role="list" className="grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
-            flex justify-around items-center h-full pt-20">
+            <ul role="list" className="grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:flex justify-around items-center h-full 
+            block pt-20">
         {clients.map((company) => (
             <li
             key={company.web}
-            className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow h-[50%] w-[240px]"
+            className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-blue-200 text-center shadow h-[50%] w-[240px]
+            sm:mb-0 mb-10"
             >
             <div className="flex flex-1 flex-col p-8">
-                <Image className="mx-auto h-32 w-32 flex-shrink-0 rounded-full object-cover" src={company.imageUrl} alt="" />
+                <Image className="mx-auto h-32 w-32 flex-shrink-0 rounded-full object-contain" src={company.imageUrl} alt="" />
                 <h3 className="mt-6 text-sm font-medium text-gray-900">{company.name}</h3>
                 <dl className="mt-1 flex flex-grow flex-col justify-between">
                 <dt className="sr-only">Title</dt>
