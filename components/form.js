@@ -1,7 +1,5 @@
-
 import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Switch } from '@headlessui/react'
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -11,7 +9,7 @@ export default function Form() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="bg-[#1b1e3d] px-6 pt-3 lg:px-8 h-auto sm:h-screen">
+    <div className="bg-[#1b1e3d] px-6 pt-16 lg:px-8 h-auto sm:h-screen sm:pt-3" id='contact'>
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
@@ -26,12 +24,12 @@ export default function Form() {
       </div>
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-4xl font-semibold leading-7 text-gray-200 mx-auto max-w-4xl sm:text-center pt-4">Contact</h2>
-        <p className="mx-auto mt-6 text-lg leading-8 text-gray-200 sm:text-center">
+        <p className="mx-auto mt-10 text-lg leading-8 text-gray-200 sm:text-center">
             Nous sommes impatients de vous lire ! Remplissez le formulaire ci-dessous pour nous faire part de vos projets et objectifs. 
             Notre équipe se fera un plaisir de vous accompagner dans leur réalisation.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-5 max-w-xl sm:mt-10">
+      <form action="#" method="POST" className="mx-auto mt-10 max-w-xl sm:mt-10">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-200">
@@ -44,7 +42,7 @@ export default function Form() {
                 name="first-name"
                 id="first-name"
                 autoComplete="given-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -59,7 +57,7 @@ export default function Form() {
                 name="last-name"
                 id="last-name"
                 autoComplete="family-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -74,7 +72,7 @@ export default function Form() {
                 name="email"
                 id="email"
                 autoComplete="email"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -89,7 +87,7 @@ export default function Form() {
                 required
                 id="phone"
                 autoComplete="phone"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -103,44 +101,16 @@ export default function Form() {
                 required
                 id="message"
                 rows={4}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                 defaultValue={''}
               />
             </div>
           </div>
-          {/* <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
-            <div className="flex h-6 items-center">
-              <Switch
-                checked={agreed}
-                onChange={setAgreed}
-                className={classNames(
-                  agreed ? 'bg-indigo-600' : 'bg-gray-200',
-                  'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
-                )}
-              >
-                <span className="sr-only">Agree to policies</span>
-                <span
-                  aria-hidden="true"
-                  className={classNames(
-                    agreed ? 'translate-x-3.5' : 'translate-x-0',
-                    'h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out'
-                  )}
-                />
-              </Switch>
-            </div>
-            <Switch.Label className="text-sm leading-6 text-gray-600">
-              By selecting this, you agree to our{' '}
-              <a href="#" className="font-semibold text-indigo-600">
-                privacy&nbsp;policy
-              </a>
-              .
-            </Switch.Label>
-          </Switch.Group> */}
         </div>
         <div className="mt-10">
           <button
             type="submit"
-            className="block w-full rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="block w-full rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
           >
             Envoyer
           </button>

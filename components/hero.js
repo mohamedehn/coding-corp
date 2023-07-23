@@ -12,7 +12,19 @@ const navigation = [
 ]
 
 export default function Hero() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+ 
+  const handleNav = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleLinkClick = () => {
+    // Fermer le menu de navigation sur téléphone lorsqu'un lien est cliqué
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  };
+
 
   return (
     <div className="h-auto sm:h-screen bg-[#1b1e3d]">
@@ -20,7 +32,9 @@ export default function Hero() {
         
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#1b1e3d] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#1b1e3d] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+              open={mobileMenuOpen}
+              onClose={setMobileMenuOpen}>
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
@@ -46,6 +60,7 @@ export default function Hero() {
                     <a
                       key={item.name}
                       href={item.href}
+                      onClick={handleLinkClick} // Appeler la fonction handleLinkClick lorsqu'un lien est cliqué
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-200 hover:text-gray-500"
                     >
                       {item.name}

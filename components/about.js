@@ -1,7 +1,7 @@
 const links = [
     { name: 'Nos prestations', href: '#prestations' },
-    { name: 'Portfolio', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Contact', href: '#contact' },
   ]
   
   export default function About () {
@@ -35,16 +35,16 @@ const links = [
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl text-justify">Work with us</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300 text-justify">
+            <p className="mt-6 text-lg leading-8 text-gray-200 text-justify">
               Chez Coding Corp, nous sommes passionnés par le web et nous offrons une gamme complète de services pour répondre à tous vos besoins 
               en ligne. Notre expertise couvre divers domaines du web, vous permettant de bénéficier d&apos;un guichet unique pour toutes vos exigences 
               numériques.
             </p>
-            <p className="mt-6 text-lg leading-8 text-gray-300 text-justify"> 
+            <p className="mt-6 text-lg leading-8 text-gray-200 text-justify"> 
                 Nous sommes fiers de notre savoir-faire dans la création de sites vitrines qui captivent l&apos;attention de votre audience cible. 
                 Nous allions esthétique et convivialité pour offrir une expérience utilisateur exceptionnelle à chaque visiteur.
             </p>
-            <p className="mt-6 text-lg leading-8 text-gray-300 text-justify">
+            <p className="mt-6 text-lg leading-8 text-gray-200 text-justify">
                 Chez Coding Corp, nous sommes déterminés à fournir des solutions web de haute qualité qui répondent aux besoins uniques de 
                 votre entreprise. Nous sommes impatients de collaborer avec vous pour donner vie à vos idées et vous aider à prospérer 
                 dans le monde numérique en constante évolution.

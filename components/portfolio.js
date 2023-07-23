@@ -28,9 +28,10 @@ const clients = [
 export default function Portfolio() {
 
   return (
-    <div className='h-auto sm:h-screen bg-[#212348] w-full'>
-        <h1 className="text-4xl font-semibold leading-7 text-gray-200 mx-auto max-w-4xl sm:text-center pt-10">Portfolio</h1>
-        <p className='mx-auto mt-6 text-lg leading-8 text-gray-200 sm:text-center'>Découvrez ci-dessous quelques une de nos réalisations.</p>
+    <div className='h-auto sm:h-screen bg-[#212348] w-full' id='portfolio'>
+      <div className='mx-auto max-w-4xl sm:text-center px-6 lg:px-8'>
+        <h1 className="text-4xl font-semibold leading-7 text-gray-200 pt-16 sm:pt-10">Portfolio</h1>
+        <p className='mx-auto mt-6 text-lg leading-8 text-gray-200 text-center'>Découvrez ci-dessous quelques une de nos réalisations.</p>
         <div className='flex w-full justify-center'>
             <ul role="list" className="grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:flex justify-around items-center h-full 
             block pt-20">
@@ -80,6 +81,7 @@ export default function Portfolio() {
         ))}
             </ul>
         </div>
+      </div>
     </div>
     
   )
