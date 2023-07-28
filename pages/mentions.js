@@ -15,7 +15,7 @@ export default function Mentions() {
                     </Link> 
                 </div>
                 <div className="mx-auto lg:mx-0 pt-20">
-                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-justify">Mention légales</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">Mention légales</h2>
                     <p className="mt-6 text-lg leading-8 text-gray-200 text-justify">
                         1 - PROPRIÉTÉ <br/>
                         Le présent site est la propriété de Coding Corp <br/>
@@ -33,7 +33,7 @@ export default function Mentions() {
                         Web : http://codingcorp.fr/ <br/>
                         Hébergement : Hostinger <br/>
                     </p>
-                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-justify pt-24">Politique de confidentialité</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center pt-24">Politique de confidentialité</h2>
                     <p className="mt-6 text-lg leading-8 text-gray-200 text-justify"> 
                         Les internautes accédant au site http://codingcorp.fr/ peuvent être amenés à fournir des informations nominatives ou 
                         à caractère personnel dans le cadre des services proposés par Coding Corp.
@@ -85,7 +85,7 @@ export default function Mentions() {
                     <p className="mt-6 text-lg leading-8 text-gray-200 text-justify">
                         Coding Corp veille à ce que toutes les mesures techniques et organisationnelles afin de protéger les données personnelles 
                         soient mises en œuvre, ces règles de confidentialités et de sécurité sont également imposées à l’ensemble du personnel de 
-                        Coding Corp , ainsi qu’à tous les prestataires et sous-traitants travaillant pour Coding Corp.
+                        Coding Corp, ainsi qu’à tous les prestataires et sous-traitants travaillant pour Coding Corp.
                     </p>
                 </div>
             </div>

@@ -15,8 +15,8 @@ export default function Cookies() {
                     </Link> 
                 </div>
                 <div className="mx-auto lg:mx-0 pt-20">
-                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-justify">POLITIQUE DE GESTION DES COOKIES</h2>
-                    <h3 className="text-lg font-bold tracking-tight text-white sm:text-xl text-justify pt-24">
+                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">POLITIQUE DE GESTION DES COOKIES</h2>
+                    <h3 className="text-lg font-bold tracking-tight text-white sm:text-xl pt-24">
                         INFORMATIONS À PROPOS DES COOKIES
                     </h3>
                     <p className="mt-6 text-lg leading-8 text-gray-200 text-justify">
@@ -37,7 +37,7 @@ export default function Cookies() {
                         et intérêts personnels. Selon leur fonction et leur finalité, les cookies peuvent être divisés en quatre catégories : les 
                         cookies essentiels, les cookies de mesures d’audience et de statistique, les cookies fonctionnels et les cookies publicitaires.
                     </p>
-                    <h3 className="text-lg font-bold tracking-tight text-white sm:text-xl text-justify pt-24">
+                    <h3 className="text-lg font-bold tracking-tight text-white sm:text-xl pt-24">
                         QUELLE EST LA DUREE DE CONSERVATION D’UN COOKIE ?
                     </h3>
                     <p className="mt-6 text-lg leading-8 text-gray-200 text-justify">
@@ -54,7 +54,7 @@ export default function Cookies() {
                         site ne peut pas fonctionner correctement. Ils sont stockés sur votre appareil uniquement pendant la durée de la session 
                         d’utilisation du navigateur, et votre consentement n’est pas requis pour ce type de cookie.
                     </p>
-                    <h4 className="text-lg font-bold tracking-tight text-white sm:text-lg text-justify pt-16">
+                    <h4 className="text-lg font-bold tracking-tight text-white sm:text-lg pt-16">
                         LES COOKIES DE MESURES D’AUDIENCE ET DE STATISTIQUES :  
                     </h4>
                     <p className="mt-6 text-lg leading-8 text-gray-200 text-justify">
@@ -72,7 +72,7 @@ export default function Cookies() {
                         Les cookies publicitaires sont utilisés pour diffuser des publicités qui sont pertinentes pour certains utilisateurs 
                         spécifiques et adaptées à leurs intérêts.
                     </p>
-                    <h3 className="text-lg font-bold tracking-tight text-white sm:text-xl text-justify pt-24">
+                    <h3 className="text-lg font-bold tracking-tight text-white sm:text-xl pt-24">
                         COMMENT GÉRER ET SUPPRIMER LES COOKIES ?
                     </h3>
                     <p className="mt-6 text-lg leading-8 text-gray-200 text-justify">
@@ -108,7 +108,7 @@ export default function Cookies() {
                                     ici
                                 </a>
                         </p>
-                        <h3 className="text-lg font-bold tracking-tight text-white sm:text-xl text-justify pt-24">
+                        <h3 className="text-lg font-bold tracking-tight text-white sm:text-xl pt-24">
                             MISES À JOUR DE LA POLITIQUE DE GESTION DES COOKIES :
                         </h3>
                         <p className="mt-6 text-lg leading-8 text-gray-200 text-justify">

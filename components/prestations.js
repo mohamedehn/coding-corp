@@ -45,7 +45,7 @@ export default function Prestations() {
             Choose the right plan for&nbsp;you
           </p> */}
         </div>
-        <p className="mx-auto mt-6 text-lg leading-8 text-gray-200 sm:text-center">
+        <p className="mx-auto mt-6 text-lg leading-8 text-gray-200 sm:text-center text-justify">
             Coding Corp offre une gamme complète de services web, allant de la création de sites vitrines captivants au référencement SEO 
             pour augmenter votre visibilité en ligne. Nous proposons également des services de conception de logos uniques pour renforcer 
             l&apos;identité de votre marque. Pour vos besoins professionnels, nous pouvons concevoir des cartes de visites 
