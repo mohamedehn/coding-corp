@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 function classNames(...classes) {
@@ -6,7 +7,31 @@ function classNames(...classes) {
 }
 
 export default function Form() {
-  const [agreed, setAgreed] = useState(false)
+  const [agreed, setAgreed] = useState(false);
+
+  // les variable ci-dessous permettent de récupérer les cookies et ainsi vérifier si ils sont accepté ou non
+  // on interviendra ensuite sur le bouton envoyer afin de le rendre inactif si les cookies ont été rejetées ou en attente de choix
+  const [isCookiesAccepted, setIsCookiesAccepted] = useState(false);
+
+  useEffect(() => {
+    const cookiesAccepted = document.cookie.split(';').find(cookie => cookie.trim().startsWith('cookiesAccepted='));
+    const isAccepted = cookiesAccepted && cookiesAccepted.split('=')[1] === 'true';
+    setIsCookiesAccepted(isAccepted);
+  }, []);
+
+//fonction qui permettra d'afficher un message d'alerte
+  function handleClick() {
+    if (!isCookiesAccepted) {
+      alert("Veuillez accepter les cookies pour continuer.");
+    }
+  }
+  
+  // function qui permet de bloquer l'envoi du formulaire, de supprimer les cookies du local storage, de refresh la page + afficher popUpCookies
+  const acceptCookies = (event) => {
+    event.preventDefault();
+    localStorage.removeItem("cookiesAccepted");
+    window.location.reload();
+  };
 
   return (
     <div className="bg-[#1b1e3d] px-6 pt-16 lg:px-8 h-auto sm:h-screen sm:pt-3" id='contact'>
@@ -29,7 +54,8 @@ export default function Form() {
             Notre équipe se fera un plaisir de vous accompagner dans leur réalisation.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-10 max-w-xl sm:mt-10">
+      <form action="https://formsubmit.co/contact@codingcorp.fr" method="POST" className="mx-auto mt-10 max-w-xl sm:mt-10">
+      <input type="hidden" name="_next" value="https://codingcorp.fr/confirmation"/>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-200">
@@ -42,7 +68,7 @@ export default function Form() {
                 name="first-name"
                 id="first-name"
                 autoComplete="given-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -57,7 +83,7 @@ export default function Form() {
                 name="last-name"
                 id="last-name"
                 autoComplete="family-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -72,7 +98,7 @@ export default function Form() {
                 name="email"
                 id="email"
                 autoComplete="email"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -87,7 +113,7 @@ export default function Form() {
                 required
                 id="phone"
                 autoComplete="phone"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -101,19 +127,26 @@ export default function Form() {
                 required
                 id="message"
                 rows={4}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                 defaultValue={''}
               />
             </div>
           </div>
         </div>
         <div className="mt-10">
+        {isCookiesAccepted ? 
           <button
             type="submit"
+            disabled={!isCookiesAccepted} // permet de vérifier si l'utilisateur à accepté ou non les cookies
             className="block w-full rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
           >
             Envoyer
           </button>
+        :
+          <div className='text-md leading-8 text-gray-200'>
+            <button onClick={acceptCookies}>Merci d&apos;accepter au préalable les cookies en cliquant ici</button>
+          </div>
+        }
         </div>
       </form>
     </div>

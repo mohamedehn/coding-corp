@@ -7,7 +7,7 @@ const links = [
   export default function About () {
 
     return (
-      <div className="relative overflow-hidden bg-[#212348] py-24 sm:py-32 h-auto sm:h-screen" id="about">
+      <div className="relative overflow-hidden bg-[#212348] py-24 sm:py-16 md:py-32 h-auto sm:h-screen" id="about">
         <div
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
           aria-hidden="true"

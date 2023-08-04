@@ -27,7 +27,7 @@ export default function Hero() {
 
 
   return (
-    <div className="h-auto sm:h-screen bg-[#1b1e3d]">
+    <div className="h-screen bg-[#1b1e3d]">
       <header className="absolute inset-x-0 top-0 h-screen">
         
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>

@@ -37,7 +37,7 @@ const tiers = [
 
 export default function Prestations() {
   return (
-    <div className="bg-[#1b1e3d] py-10 sm:py-14 h-auto sm:h-screen" id='prestations'>
+    <div className="bg-[#1b1e3d] py-10 sm:py-14 h-auto lg:h-screen" id='prestations'>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl sm:text-center">
           <h2 className="text-4xl font-semibold leading-7 text-gray-200 sm:pt-0 pt-16">Nos prestations</h2>

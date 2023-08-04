@@ -7,6 +7,8 @@ import Prestations from '@/components/prestations';
 import Portfolio from '@/components/portfolio';
 import Form from '@/components/form';
 import Footer from '@/components/footer';
+import ScrollToTop from '@/components/scrollToTop';
+import PopUpCookies from '@/components/popUpCookies';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,11 +24,13 @@ export default function Home() {
           unique pour toutes vos exigences numériques."/>
       </Head>
       <Hero/>
+      <PopUpCookies/>
       <About/>
       <Prestations/>
       <Portfolio/>
       <Form/>
       <Footer/>
+      <ScrollToTop/>
       </>
   )
 }
