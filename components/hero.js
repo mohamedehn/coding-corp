@@ -32,7 +32,8 @@ export default function Hero() {
         
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#1b1e3d] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#1b1e3d] px-6 py-6 sm:max-w-sm sm:ring-1
+             sm:ring-gray-900/10"
               open={mobileMenuOpen}
               onClose={setMobileMenuOpen}>
             <div className="flex items-center justify-between">

@@ -2,7 +2,7 @@ import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import dns from "../public/assets/dnsLogo.png"
 import ges from "../public/assets/ges2.webp"
-import prestatair from "../public/assets/prestatair.png"
+import prestatair from "../public/assets/prestatair2.png"
 
 const clients = [
   {
@@ -34,15 +34,15 @@ export default function Portfolio() {
         <p className='mx-auto mt-6 text-lg leading-8 text-gray-200 text-center'>Découvrez ci-dessous quelques une de nos réalisations.</p>
         <div className='flex w-full justify-center'>
             <ul role="list" className="grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:flex justify-around items-center 
-              h-full block pt-20">
+              h-full block pt-20 cursor-pointer">
             {clients.map((company) => (
             <li
             key={company.web}
             className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-blue-200 text-center shadow h-[50%] w-[240px]
-            sm:mb-10 mb-10"
+            sm:mb-10 mb-10 hover:scale-110 ease-in duration-300"
             >
             <div className="flex flex-1 flex-col p-8">
-                <Image className="mx-auto h-32 w-48 flex-shrink-0 rounded-full object-contain" src={company.imageUrl} alt="" />
+                <Image className="mx-auto h-24 w-48 flex-shrink-0 rounded-full object-contain" src={company.imageUrl} alt="" />
                 <h3 className="mt-6 text-sm font-medium text-gray-900">{company.name}</h3>
                 <dl className="mt-1 flex flex-grow flex-col justify-between">
                 <dt className="sr-only">Title</dt>
