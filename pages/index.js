@@ -22,6 +22,7 @@ export default function Home() {
           pour répondre à tous vos besoins en ligne. Notre expertise couvre divers domaines du web, vous permettant de bénéficier d&apos;un guichet 
           unique pour toutes vos exigences numériques."/>
         <meta name="google-site-verification" content="v9XzvmL7QdO5dQvkAkJyTNF2JKdIg1ISWS_OR82ht-Q" />
+        <meta name="robots" content="index, follow"/>
       </Head>
       <Hero/>
       <PopUpCookies/>
