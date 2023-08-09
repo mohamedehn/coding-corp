@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
-import coding from '../public/assets/Coding2.png'
+import coding from '../public/assets/CODINGCORP.png'
 
 const navigation = [
   { name: 'Accueil', href: '#accueil' },
@@ -40,7 +40,7 @@ export default function Hero() {
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <Image
-                  className="h-8 w-auto"
+                  className="h-3 w-auto"
                   src={coding}
                   alt="/"
                 />
@@ -80,7 +80,7 @@ export default function Hero() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <Image
-                className="w-auto h-[150px] absolute top-0 right-0 left-0 bottom-0"
+                className="w-auto h-[50px] absolute top-5 sm:top-10 right-0 left-6 bottom-0"
                 src={coding}
                 alt="/"
               />
@@ -127,7 +127,7 @@ export default function Hero() {
             </div> */}
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-200 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-200 sm:text-8xl">
               Coding Corp
             </h1>
             <h2 className="text-4xl font-bold tracking-tight text-gray-200 sm:text-4xl pt-10">
