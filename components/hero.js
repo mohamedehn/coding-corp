@@ -40,7 +40,7 @@ export default function Hero() {
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <Image
-                  className="h-3 w-auto"
+                  className="h-[50px] w-auto"
                   src={coding}
                   alt="/"
                 />
@@ -127,7 +127,7 @@ export default function Hero() {
             </div> */}
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-200 sm:text-8xl">
+            <h1 className="text-5xl font-bold tracking-tight text-gray-200 sm:text-8xl">
               Coding Corp
             </h1>
             <h2 className="text-4xl font-bold tracking-tight text-gray-200 sm:text-4xl pt-10">
