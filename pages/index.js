@@ -14,24 +14,25 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <>
-    <Head>
+      <Head>
         <title>Coding Corp</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name ="description" content="  Chez Coding Corp, nous sommes passionnés par le web et nous offrons une gamme complète de services 
-          pour répondre à tous vos besoins en ligne. Notre expertise couvre divers domaines du web, vous permettant de bénéficier d&apos;un guichet 
-          unique pour toutes vos exigences numériques."/>
+        <meta name="description" content="Je suis passionné par le web et, à travers Coding Corp,
+        je vous propose une gamme complète de services pour répondre à tous vos besoins en ligne.
+        Mon expertise couvre divers domaines du web, vous permettant de bénéficier d’un interlocuteur
+        unique pour toutes vos exigences numériques."/>
         <meta name="google-site-verification" content="v9XzvmL7QdO5dQvkAkJyTNF2JKdIg1ISWS_OR82ht-Q" />
-        <meta name="robots" content="index, follow"/>
+        <meta name="robots" content="index, follow" />
       </Head>
-      <Hero/>
-      <PopUpCookies/>
-      <About/>
-      <Prestations/>
-      <Portfolio/>
-      <Form/>
-      <Footer/>
-      <ScrollToTop/>
-      </>
+      <Hero />
+      <PopUpCookies />
+      <About />
+      <Prestations />
+      <Portfolio />
+      <Form />
+      <Footer />
+      <ScrollToTop />
+    </>
   )
 }

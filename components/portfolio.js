@@ -3,6 +3,7 @@ import Image from 'next/image';
 import dns from "../public/assets/dnsLogo.png"
 import ges from "../public/assets/ges2.webp"
 import prestatair from "../public/assets/prestatair2.png"
+import alisee from "../public/assets/aliseeIcon.png"
 
 const clients = [
   {
@@ -19,21 +20,27 @@ const clients = [
   },
   {
     name: 'Green Energy Solutions',
-    title: 'React / SCSS',
+    title: 'Angular - Tailwind',
     web: 'https://greenenergysolutions.fr/',
     imageUrl: ges,
   },
+  {
+    name: 'Alisée Eggermont',
+    title: 'Angular - Tailwind',
+    web: 'https://alisee-eggermont-psy.fr/',
+    imageUrl: alisee,
+  }
 ]
 
 export default function Portfolio() {
 
   return (
-    <div className='h-auto md:h-screen bg-[#212348] w-full' id='portfolio'>
+    <div className='h-auto lg:h-screen bg-[#212348] w-full' id='portfolio'>
       <div className='mx-auto max-w-4xl sm:text-center px-6 lg:px-8'>
         <h1 className="text-4xl font-semibold leading-7 text-gray-200 pt-16 sm:pt-10">Portfolio</h1>
-        <p className='mx-auto mt-6 text-lg leading-8 text-gray-200 text-center'>Découvrez ci-dessous quelques une de nos réalisations.</p>
+        <p className='mx-auto mt-6 text-lg leading-8 text-gray-200 text-center'>Découvrez ci-dessous quelques une de mes réalisations.</p>
         <div className='flex w-full justify-center'>
-            <ul role="list" className="grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:flex justify-around items-center 
+            <ul role="list" className="grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:flex md:flex-wrap lg:flex-nowrap justify-around items-center
               h-full block pt-20 cursor-pointer">
             {clients.map((company) => (
             <li
@@ -83,6 +90,6 @@ export default function Portfolio() {
         </div>
       </div>
     </div>
-    
+
   )
 }
