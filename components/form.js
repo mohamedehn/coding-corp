@@ -19,13 +19,13 @@ export default function Form() {
     setIsCookiesAccepted(isAccepted);
   }, []);
 
-//fonction qui permettra d'afficher un message d'alerte
+  //fonction qui permettra d'afficher un message d'alerte
   function handleClick() {
     if (!isCookiesAccepted) {
       alert("Veuillez accepter les cookies pour continuer.");
     }
   }
-  
+
   // function qui permet de bloquer l'envoi du formulaire, de supprimer les cookies du local storage, de refresh la page + afficher popUpCookies
   const acceptCookies = (event) => {
     event.preventDefault();
@@ -50,12 +50,12 @@ export default function Form() {
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-4xl font-semibold leading-7 text-gray-200 mx-auto max-w-4xl sm:text-center pt-4">Contact</h2>
         <p className="mx-auto mt-10 text-lg leading-8 text-gray-200 sm:text-center">
-            Nous sommes impatients de vous lire ! Remplissez le formulaire ci-dessous pour nous faire part de vos projets et objectifs. 
-            Notre équipe se fera un plaisir de vous accompagner dans leur réalisation.
+          J’ai hâte de vous lire ! <br /> Remplissez le formulaire ci-dessous pour me faire part de vos projets et objectifs. <br />
+          Je serai ravi de vous accompagner dans leur réalisation.
         </p>
       </div>
       <form action="https://formsubmit.co/contact@codingcorp.fr" method="POST" className="mx-auto mt-10 max-w-xl sm:mt-10">
-      <input type="hidden" name="_next" value="https://codingcorp.fr/confirmation"/>
+        <input type="hidden" name="_next" value="https://codingcorp.fr/confirmation" />
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-200">
@@ -104,7 +104,7 @@ export default function Form() {
           </div>
           <div className="sm:col-span-2">
             <label htmlFor="phone-number" className="flex text-sm font-semibold leading-6 text-gray-200">
-                Téléphone
+              Téléphone
             </label>
             <div className="mt-2.5">
               <input
@@ -134,19 +134,19 @@ export default function Form() {
           </div>
         </div>
         <div className="mt-10">
-        {isCookiesAccepted ? 
-          <button
-            type="submit"
-            disabled={!isCookiesAccepted} // permet de vérifier si l'utilisateur à accepté ou non les cookies
-            className="block w-full rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
-          >
-            Envoyer
-          </button>
-        :
-          <div className='text-md leading-8 text-gray-200'>
-            <button onClick={acceptCookies}>Merci d&apos;accepter au préalable les cookies en cliquant ici</button>
-          </div>
-        }
+          {isCookiesAccepted ?
+            <button
+              type="submit"
+              disabled={!isCookiesAccepted} // permet de vérifier si l'utilisateur à accepté ou non les cookies
+              className="block w-full rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+            >
+              Envoyer
+            </button>
+            :
+            <div className='text-md leading-8 text-gray-200'>
+              <button onClick={acceptCookies}>Merci d&apos;accepter au préalable les cookies en cliquant ici</button>
+            </div>
+          }
         </div>
       </form>
     </div>

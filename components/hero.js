@@ -13,7 +13,7 @@ const navigation = [
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
- 
+
   const handleNav = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <div className="h-screen bg-[#1b1e3d]">
       <header className="absolute inset-x-0 top-0 h-screen">
-        
+
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#1b1e3d] px-6 py-6 sm:max-w-sm sm:ring-1
@@ -134,7 +134,7 @@ export default function Hero() {
               Booster votre présence sur le web !
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-200">
-              Nos solutions s&apos;adaptent à vos besoins.
+              Mes solutions s&apos;adaptent à vos besoins.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 z-100">
               <a
@@ -144,7 +144,7 @@ export default function Hero() {
                 En savoir plus
               </a>
               <a href="#contact" className="text-sm font-semibold leading-6 text-gray-200">
-                Contactez-nous <span aria-hidden="true">→</span>
+                Contactez-moi <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
