@@ -5,7 +5,7 @@ const tiers = [
     name: 'Création de site vitrine',
     id: 'tier-basic',
     href: '#',
-    price: { monthly: 'à partir de 900€', other: "(refonte de site existant sur devis)"},
+    price: { monthly: 'à partir de 900€', other: "(refonte de site existant sur devis)" },
     description: 'Captivez votre audience avec un site percutant.',
     features: ["5 pages inclus", "référencement google", "mise en ligne et maintenance"],
   },
@@ -13,7 +13,7 @@ const tiers = [
     name: 'Référencement SEO',
     id: 'tier-essential',
     href: '#',
-    price: { monthly: 'à partir de 350€'},
+    price: { monthly: 'à partir de 350€' },
     description: "La visibilité en ligne est une étape importante dans la vie d'une entreprise et je travaille diligemment pour optimiser votre site web.",
     features: [
       'référencement Google',
@@ -25,7 +25,7 @@ const tiers = [
     name: 'Création de logo / Carte de visite',
     id: 'tier-growth',
     href: '#',
-    price: { monthly: 'à partir de 150€', other:'(refonte logo existant sur devis)' },
+    price: { monthly: 'à partir de 150€', other: '(refonte logo existant sur devis)' },
     description: "Un logo bien conçu est essentiel pour établir une présence visuelle forte et différencier votre entreprise de la concurrence.",
     features: [
       'Plusieurs variantes de couleurs',
@@ -41,9 +41,6 @@ export default function Prestations() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl sm:text-center">
           <h2 className="text-4xl font-semibold leading-7 text-gray-200 sm:pt-0 pt-16">Mes prestations</h2>
-          {/* <p className="mt-2 text-2xl font-bold tracking-tight text-gray-200 sm:text-3xl">
-            Choose the right plan for&nbsp;you
-          </p> */}
         </div>
         <p className="mx-auto mt-6 text-lg leading-8 text-gray-200 sm:text-center text-justify">
           Chez Coding Corp, je vous propose une gamme complète de services web, allant de la création de
