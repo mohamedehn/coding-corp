@@ -1,9 +1,7 @@
 import { GlobeAltIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import dns from "../public/assets/dnsLogo.png"
-import ges from "../public/assets/ges2.webp"
 import prestatair from "../public/assets/prestatair2.png"
-import alisee from "../public/assets/aliseeIcon.png"
 
 const clients = [
   {
@@ -18,18 +16,6 @@ const clients = [
     web: 'https://datanetworksolutions.fr/',
     imageUrl: dns,
   },
-  {
-    name: 'Green Energy Solutions',
-    title: 'Angular - Tailwind',
-    web: 'https://greenenergysolutions.fr/',
-    imageUrl: ges,
-  },
-  {
-    name: 'Alisée Eggermont',
-    title: 'Angular - Tailwind',
-    web: 'https://alisee-eggermont-psy.fr/',
-    imageUrl: alisee,
-  }
 ]
 
 export default function Portfolio() {
